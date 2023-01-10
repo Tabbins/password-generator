@@ -92,14 +92,33 @@ var upperCasedCharacters = [
 function getPasswordOptions() {
 
   // length prompt 
-  let passwordlength = prompt("How many characters generated? Min 10 : Max 64")
+  let passwordLength = prompt("How many characters generated? Min 10 : Max 64")
     // Using an if statements to remind user of length requirements 
-  if (passwordlength < 10) {
-    alert("Password must be at least 10 characters")
+  if (passwordLength < 10) {
+    alert("Password must be at least 10 characters");
   }
-  else if (passwordlength > 64) { 
-    alert("password must not exceed 64 characters")
+  else if (passwordLength > 64) { 
+    alert("password must not exceed 64 characters");
   }
+}
+  // Checking for different character types 
+  //Include lowercase 
+  let passLowCase = confirm("Include lower case?");
+
+  //Include uppercase 
+  let passUpCase = confirm("Include upper case?");
+
+  //Include numbers
+  let passNum = confirm("Include numbers?");
+
+  // Include special characters
+  let passSpecChar = confirm("Include special characters?");
+
+  //prompt if no character type included. 
+  if (passLowcase === false && passupcase === false && passnum === false && passspecchar === false) { 
+    alert("Must include at least one character type")
+  }
+
 
 
 
