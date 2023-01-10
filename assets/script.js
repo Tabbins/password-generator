@@ -91,7 +91,17 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-}
+  // length prompt 
+  let passwordlength = prompt("How many characters generated? Min 10 : Max 64")
+    // Using an if statements to remind user of length requirements 
+  if (passwordlength < 10) {
+    alert("Password must be at least 10 characters")
+  }
+  else if (passwordlength > 64) { 
+    alert("password must not exceed 64 characters")
+  }
+
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
